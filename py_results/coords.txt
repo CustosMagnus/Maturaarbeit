@@ -1,0 +1,375 @@
+./single_picture_videos/PA260011020.png
+376 197
+400 161
+423 82
+407 56
+./single_picture_videos/PA260011021.png
+372 208
+398 172
+420 95
+404 67
+./single_picture_videos/PA260011022.png
+371 220
+395 184
+418 106
+403 79
+./single_picture_videos/PA260011023.png
+367 231
+392 196
+415 119
+402 91
+./single_picture_videos/PA260011024.png
+363 245
+389 209
+414 130
+400 103
+./single_picture_videos/PA260011025.png
+361 254
+387 220
+412 140
+399 115
+./single_picture_videos/PA260011026.png
+358 267
+384 232
+409 154
+396 126
+./single_picture_videos/PA260011027.png
+360 276
+381 243
+407 166
+395 137
+./single_picture_videos/PA260011028.png
+348 288
+379 257
+407 179
+395 151
+./single_picture_videos/PA260011029.png
+353 297
+377 268
+407 192
+394 159
+./single_picture_videos/PA260011030.png
+347 305
+379 275
+410 197
+397 170
+./single_picture_videos/PA260011031.png
+350 309
+379 280
+416 209
+402 178
+./single_picture_videos/PA260011032.png
+354 308
+386 283
+424 214
+409 188
+./single_picture_videos/PA260011033.png
+355 307
+390 285
+431 220
+417 194
+./single_picture_videos/PA260011034.png
+357 307
+393 288
+437 227
+425 199
+./single_picture_videos/PA260011035.png
+358 309
+398 290
+446 235
+432 205
+./single_picture_videos/PA260011036.png
+358 310
+402 295
+454 242
+439 210
+./single_picture_videos/PA260011037.png
+367 309
+405 298
+458 246
+444 215
+./single_picture_videos/PA260011038.png
+364 308
+406 297
+462 250
+448 223
+./single_picture_videos/PA260011039.png
+364 308
+407 302
+463 257
+451 229
+./single_picture_videos/PA260011040.png
+365 310
+409 302
+465 264
+453 234
+./single_picture_videos/PA260011041.png
+368 312
+410 303
+466 267
+452 239
+./single_picture_videos/PA260011042.png
+369 311
+413 302
+467 269
+455 243
+./single_picture_videos/PA260011043.png
+373 309
+415 301
+469 271
+457 244
+./single_picture_videos/PA260011044.png
+375 309
+416 300
+471 269
+458 241
+./single_picture_videos/PA260011045.png
+378 308
+417 300
+472 267
+458 240
+./single_picture_videos/PA260011046.png
+379 309
+418 299
+472 264
+458 235
+./single_picture_videos/PA260011047.png
+379 307
+418 298
+471 262
+457 234
+./single_picture_videos/PA260011048.png
+378 309
+417 298
+469 260
+456 231
+./single_picture_videos/PA260011049.png
+378 308
+416 297
+468 259
+454 230
+./single_picture_videos/PA260011050.png
+376 306
+416 296
+466 255
+454 228
+./single_picture_videos/PA260011051.png
+377 307
+414 296
+465 253
+450 224
+./single_picture_videos/PA260011052.png
+375 307
+413 292
+463 252
+449 223
+./single_picture_videos/PA260011053.png
+375 306
+412 292
+460 247
+447 221
+./single_picture_videos/PA260011054.png
+374 304
+411 290
+462 247
+446 218
+./single_picture_videos/PA260011055.png
+374 305
+411 289
+458 245
+444 214
+./single_picture_videos/PA260011056.png
+373 305
+410 289
+457 243
+444 212
+./single_picture_videos/PA260011057.png
+373 304
+410 288
+458 240
+445 211
+./single_picture_videos/PA260011058.png
+372 303
+408 286
+456 237
+443 207
+./single_picture_videos/PA260011059.png
+372 302
+407 284
+456 235
+443 206
+./single_picture_videos/PA260011060.png
+373 301
+407 285
+455 234
+444 205
+./single_picture_videos/PA260011061.png
+371 300
+406 284
+454 232
+444 203
+./single_picture_videos/PA260011062.png
+370 301
+406 281
+454 229
+442 201
+./single_picture_videos/PA260011063.png
+371 299
+406 283
+455 229
+443 200
+./single_picture_videos/PA260011064.png
+370 299
+406 281
+455 227
+444 197
+./single_picture_videos/PA260011065.png
+370 298
+406 279
+454 224
+443 196
+./single_picture_videos/PA260011066.png
+371 296
+406 279
+453 224
+444 193
+./single_picture_videos/PA260011067.png
+371 298
+405 280
+454 224
+445 193
+./single_picture_videos/PA260011068.png
+371 297
+404 278
+453 221
+445 191
+./single_picture_videos/PA260011069.png
+371 295
+404 278
+454 219
+445 188
+./single_picture_videos/PA260011070.png
+371 296
+406 276
+454 218
+446 188
+./single_picture_videos/PA260011071.png
+373 296
+405 275
+453 216
+446 186
+./single_picture_videos/PA260011072.png
+373 295
+406 275
+453 216
+445 183
+./single_picture_videos/PA260011073.png
+373 295
+404 272
+453 210
+446 180
+./single_picture_videos/PA260011074.png
+374 293
+404 271
+451 206
+446 178
+./single_picture_videos/PA260011075.png
+374 294
+405 268
+450 205
+447 175
+./single_picture_videos/PA260011076.png
+375 294
+404 266
+450 201
+445 169
+./single_picture_videos/PA260011077.png
+375 293
+404 264
+448 198
+444 167
+./single_picture_videos/PA260011078.png
+374 291
+405 262
+446 193
+445 161
+./single_picture_videos/PA260011079.png
+376 288
+403 259
+445 191
+442 157
+./single_picture_videos/PA260011080.png
+376 287
+401 254
+444 185
+442 154
+./single_picture_videos/PA260011081.png
+377 282
+403 250
+443 181
+441 149
+./single_picture_videos/PA260011082.png
+379 278
+404 246
+441 175
+439 142
+./single_picture_videos/PA260011083.png
+381 277
+404 240
+441 167
+438 137
+./single_picture_videos/PA260011084.png
+383 272
+404 235
+439 164
+438 132
+./single_picture_videos/PA260011085.png
+387 268
+406 231
+441 156
+439 126
+./single_picture_videos/PA260011086.png
+391 263
+409 225
+442 151
+440 121
+./single_picture_videos/PA260011087.png
+395 259
+411 220
+444 143
+442 113
+./single_picture_videos/PA260011088.png
+400 251
+416 215
+446 138
+445 109
+./single_picture_videos/PA260011089.png
+406 247
+421 209
+450 132
+447 102
+./single_picture_videos/PA260011090.png
+410 243
+426 201
+454 125
+450 95
+./single_picture_videos/PA260011091.png
+418 236
+430 196
+457 121
+453 89
+./single_picture_videos/PA260011092.png
+422 229
+435 191
+462 114
+457 81
+./single_picture_videos/PA260011093.png
+430 225
+442 186
+466 106
+459 76
+./single_picture_videos/PA260011094.png
+435 218
+448 179
+471 100
+465 70
