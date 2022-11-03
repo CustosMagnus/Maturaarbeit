@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <fstream>
 #include <cmath>
 #include <assert.h>
 #include <vector>
@@ -13,10 +12,13 @@ using namespace std;
 const double scale = 1.0;
 
 
+double shift_for_poly_func(unsigned int t_picture){
+    double t_p = t_picture;
+    double t_f = 0e0;
 
-double get_poly_func_value(double *coef_ar[], unsigned int &x){
-
+    return t_f;
 }
+
 
 class ligament {
 public: // variables
@@ -24,6 +26,8 @@ public: // variables
     double l, r;
     // angle in rad
     double alpha, betta;
+    // forces on each end
+    double Fxl, Fxr;
     // strain in N
     double Fx;
     // vektor with all Fx
@@ -45,13 +49,17 @@ void model1(){
     const double t_start = 8.955;
     const string k_file = "data_kraftmessplatte.txt";
     const unsigned int k_len = file_length(k_file);
-    const double mu_coef_ar[2] = {1e0, 2e0};
+    // mu(x) = -7E-08x^6 + 2E-05x^5 - 0.0016x^4 + 0.0677x^3 - 1.3562x^2 + 8.8842x + 61.466
+    const vector<double> v_mu_coef{61.466, 8.8842, -1.3562, 0.0677, -0.0016, 2e-5, -7e-8};
+    // zeta(x) = 7E-08x^6 - 2E-05x^5 + 0.0016x^4 - 0.0666x^3 + 1.2848x^2 - 7.5825x + 36.272
+    const vector<double> v_zeta_coef{36.272, -7.5825, 1.2848, -0.0666, 0.0016, -2e-5, 7e-8};
 
     // names are taken from the geogebra file
     double F_Achillessehne; double mu; double r = 17.41; double M_A; // r = r0 from geogebra file
     vector<double> v_F_Achillessehne; v_F_Achillessehne.resize(k_len, 0);
     double F_N; double zeta; double l = 57.07; double M_N; // l = l1 from geogebra file
     vector<double> v_F_N; v_F_N.resize(k_len, 0);
+    vector<double> v_zeta(k_len, 0), v_mu(k_len, 0);
     l *= scale;
     r *= scale;
 
@@ -64,8 +72,8 @@ void model1(){
     const long double tare = sqrt(pow(*data, 2)); // tare = |data[0]|
 
     for (unsigned int t_steps=0;t_steps<k_len;t_steps++){
-        zeta = rad(63.69);
-        mu = rad(5);
+        zeta = get_poly_func_value(v_zeta_coef, shift_for_poly_func(t_steps));
+        mu = get_poly_func_value(v_mu_coef, shift_for_poly_func(t_steps));
 
         F_N = *(data+t_steps)+tare;
         if (F_N<0){F_N = 0;} // because there should be no negative force
@@ -76,6 +84,8 @@ void model1(){
         x1.Fx = (M_A-M_N)/(x1.r*sin(x1.betta)-x1.l*sin(x1.alpha));
 
         // save data
+        v_mu[t_steps] = mu;
+        v_zeta[t_steps] = zeta;
         v_F_Achillessehne[t_steps] = F_Achillessehne;
         v_F_N[t_steps] = F_N;
         x1.v_Fx.push_back(x1.Fx);
@@ -87,6 +97,8 @@ void model1(){
     save_vector(v_F_N, "F_N.txt");
     save_vector(v_F_Achillessehne, "F_Achillessehne.txt");
     save_vector(x1.v_Fx, "Aponeurosis_plantaris.txt");
+    save_vector(v_mu, "mu_calculated.txt");
+    save_vector(v_zeta, "zeta_calculated.txt");
 }
 
 

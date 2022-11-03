@@ -44,14 +44,20 @@ double deg(double rad){
     return (rad*(180/PI));
 }
 
-double get_perp_f(double length, double angle, double force){
-    return length*sin(angle)*force;
-}
-
 void save_vector(vector<double> &vec, string name){
     ofstream file(("c_results/"+ name));
     for (auto i = vec.begin(); i!=vec.end();++i) {
         file<<*i<<"\n";
     }
     file.close();
+}
+
+double get_poly_func_value(const vector<double> &vec, double x){ // vector contains all the coefficients of the function
+    int n = 0; // (to the power of n)
+    double res = 0;
+    for(auto i=vec.begin();i!=vec.end();++i){
+        res += *i * pow(x, n);
+        n++;
+    }
+    return res;
 }
