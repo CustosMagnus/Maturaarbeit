@@ -7,6 +7,7 @@
 #include <cmath>
 #include <fstream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -45,4 +46,12 @@ double deg(double rad){
 
 double get_perp_f(double length, double angle, double force){
     return length*sin(angle)*force;
+}
+
+void save_vector(vector<double> &vec, string name){
+    ofstream file(("c_results/"+ name));
+    for (auto i = vec.begin(); i!=vec.end();++i) {
+        file<<*i<<"\n";
+    }
+    file.close();
 }

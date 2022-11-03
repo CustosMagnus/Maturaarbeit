@@ -6,10 +6,12 @@
 #define CODE_COMMON_USE_FUNCTIONS_H
 
 #include <string>
+#include <vector>
 int file_length(const std::string &file_name);
 long double* read_file(const std::string &file_name, long double *ar);
 double rad(double deg);
 double deg(double rad);
 double get_perp_f(double length, double angle, double force);
+void save_vector(std::vector<double> &vec, std::string name);
 
 #endif //CODE_COMMON_USE_FUNCTIONS_H
