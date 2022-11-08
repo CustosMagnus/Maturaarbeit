@@ -39,6 +39,7 @@ ligament::ligament(double length_l, double length_r, // constructor
 }
 
 void model1() {
+    double h_on_floor = 0; // Force at the moment the foot touches the floor.
     const double dt = 2.5e-3;
     const double t_start = 8.955;
     const string k_file = "data_kraftmessplatte.txt";
@@ -114,17 +115,24 @@ void model1() {
 
         F_N = (*(data + t_steps) + tare)/2; // weil 2 füsse
         if (F_N < 0) { F_N = 0; } // because there should be no negative force
-        M_N = F_N * sin(zeta) * l;
-        cout << sin(zeta) << endl;
-        F_Achillessehne = M_N / (sin(mu) * r);
-        M_A = sin(mu) * r * F_Achillessehne;
+        // if heel is not on the floor (zeta <= 62.2°)
+        if (zeta <= rad(62.2)) {
+            M_N = F_N * sin(zeta) * l;
+            F_Achillessehne = M_N / (sin(mu) * r);
+            M_A = sin(mu) * r * F_Achillessehne;
+        }
+        else { // if heel is on the floor
+            if (h_on_floor == 0){
+
+            }
+        }
         assert(M_A >= 0 && F_Achillessehne >= 0 && M_N >= 0);
 
         x1.Fx = (M_A - M_N) / (x1.r * sin(x1.betta) - x1.l * sin(x1.alpha));
 
         // save data
-        v_mu[t_steps] = mu;
-        v_zeta[t_steps] = zeta;
+        v_mu[t_steps] = deg(mu);
+        v_zeta[t_steps] = deg(zeta);
         v_F_Achillessehne[t_steps] = F_Achillessehne;
         v_F_N[t_steps] = F_N;
         x1.v_Fx.push_back(x1.Fx);

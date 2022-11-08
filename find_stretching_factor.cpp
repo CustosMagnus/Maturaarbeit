@@ -9,7 +9,6 @@ double find_stre_func() {
     const vector<double> vec{61.466, 8.8842, -1.3562, 0.0677, -0.0016, 2e-5, -7e-8};
     /*
      t == 11 -> Landung             x == 3
-     t == 23 -> tiefster punkt      x == ?
      t == 61 -> absprung fertig     x == 48
 
      delta_t == 61-11 = 50
