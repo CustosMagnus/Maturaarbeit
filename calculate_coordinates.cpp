@@ -46,8 +46,8 @@ void calculate_angles_from_coordinates() {
         turn so far that m_1,2 = line(Messpunkt1, Messpunkt2) is collinear with l1
         turn by -> (-41.73° + -129.43°) = -171.16°
         */
-        const double turn_angle_l1 = -171.16;
-        const double turn_angle_r0 = -41.73;
+        const double turn_angle_l1 = -52.08-119.08; // dorsum of the foot
+        const double turn_angle_r0 = -52.08; // heel
         // Messpunkt1
         double m1[] = {static_cast<double>(ar[i * 4][0]), static_cast<double>(y_size - ar[i * 4][1])};
         // Messpunkt2
