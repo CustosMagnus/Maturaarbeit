@@ -57,7 +57,7 @@ void model1() {
         peroneus.omega = mu - peroneus.gamma; // angle between u and F_Achillessehne
 
         v_F_N[t_steps] = F_N = (*(data + t_steps) + tare) / 2; // weil 2 füsse
-        if (F_N < 0) { F_N = 0; } // because there should be no negative force
+        if (F_N < 0) { v_F_N[t_steps] = F_N = 0; } // because there should be no negative force
         /*
          if heel is not on the floor
          zeta = 62.2° -> point where the heel starts to touch the spieth roll
