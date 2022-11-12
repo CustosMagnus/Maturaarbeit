@@ -13,6 +13,13 @@ using namespace std;
 
 void model1() {
     s_vec save;
+    ligament
+    x0(57.07347, 20.54411, 20.46205, 76.21216, 0.25),
+    x1(31.95423,20.54411,36.2549,66.90092,0.25),
+    x2(19.46833,15.10836,50.22875,82.05809,0.25),
+    x3(14.95728,11.53488,40.95749,121.78992,0.25);
+    vector<ligament> lig{x0, x1, x2, x3};
+
     double F; /* total force on all Ligaments */
     double h_on_floor = 0; // Force at the moment the foot touches the floor
     bool h_on_floor_check;
@@ -37,15 +44,12 @@ void model1() {
     l *= scale;
     r *= scale;
 
-    ligament x1(57.07347, 20.54411, 20.46205, 76.21216, 0.25);
-    ligament x2(31.95423,20.54411,36.2549,66.90092,0.25);
-    ligament x3(19.46833,15.10836,50.22875,82.05809,0.25);
-    ligament x4(14.95728,11.53488,40.95749,121.78992,0.25);
+
 
     muscle peroneus(6.73575, 500, 6.59942);
 
     // check if the sum of all the proportions x = 1
-    assert(x1.x+x2.x+x3.x+x4.x==1);
+    assert(lig[0].x+lig[1].x+lig[2].x+lig[3].x==1);
 
     double ar[k_len];
     double *data = read_file(k_file, ar);
@@ -78,10 +82,10 @@ void model1() {
         M_A = sin(mu) * r * F_Achillessehne;
 
         // calculate F which is the sum of all strains in x_n
-        F = M_A / (x1.x * x1.r * sin(x1.betta) +
-                   x2.x * x2.r * sin(x2.betta) +
-                   x3.x * x3.r * sin(x3.betta) +
-                   x4.x * x4.r * sin(x4.betta));
+        F = M_A / (lig[0].x * lig[0].r * sin(lig[0].betta) +
+                   lig[1].x * lig[1].r * sin(lig[1].betta) +
+                   lig[2].x * lig[2].r * sin(lig[2].betta) +
+                   lig[3].x * lig[3].r * sin(lig[3].betta));
 
 
         // save data
@@ -89,18 +93,15 @@ void model1() {
             v_mu[t_steps] = deg(mu);
             v_zeta[t_steps] = deg(zeta);
             // calculate and save Fx
-            x1.v_Fx.push_back(x1.get_Fx(F));
-            x2.v_Fx.push_back(x2.get_Fx(F));
-            x3.v_Fx.push_back(x3.get_Fx(F));
-            x4.v_Fx.push_back(x4.get_Fx(F));
+            save_and_calculate_ligaments(&lig[0], &lig[1], &lig[2], &lig[3], F);
             peroneus.v_F.push_back(peroneus.F);
         }
 
         // print the output
-        print(h_on_floor_check, dt, F_N, F_Achillessehne, x1.Fx, peroneus.F, t_steps);
+        print(h_on_floor_check, dt, F_N, F_Achillessehne, lig[0].Fx, peroneus.F, t_steps);
     }
     // write to file
-    vector<vector<double>*> vec_val{&peroneus.v_F, &v_F_N, &v_F_Achillessehne, &v_mu, &v_zeta, &x1.v_Fx, &x2.v_Fx, &x3.v_Fx, &x4.v_Fx};
+    vector<vector<double>*> vec_val{&peroneus.v_F, &v_F_N, &v_F_Achillessehne, &v_mu, &v_zeta, &lig[0].v_Fx, &lig[1].v_Fx, &lig[2].v_Fx, &lig[3].v_Fx};
     vector<string> vec_name{"Peroneus.txt", "F_N.txt", "F_Achillessehne.txt", "mu_calculated.txt", "zeta_calculated.txt",
     "Aponeurosis_plantaris.txt", "Plantare_longum.txt", "Calcaneocuboideum_plantare.txt", "Calcaneonaviculare_plantare.txt"};
     save.save_all_vector(vec_val, vec_name);

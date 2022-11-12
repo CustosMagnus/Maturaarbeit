@@ -77,7 +77,14 @@ void s_vec::save_vector(vector<double> &vec, const string name) {
 }
 
 void s_vec::save_all_vector(vector<vector<double>*> vec_val, vector<string> &vec_name){
-    for (auto i = 0; i < vec_name.size(); i++){
+    for (int i = 0; i < vec_name.size(); i++){
         save_vector(*vec_val[i], vec_name[i]);
     }
+}
+
+void save_and_calculate_ligaments(ligament *x0, ligament *x1, ligament *x2, ligament *x3, const double F){
+    x0->v_Fx.push_back(x0->get_Fx(F));
+    x1->v_Fx.push_back(x1->get_Fx(F));
+    x2->v_Fx.push_back(x2->get_Fx(F));
+    x3->v_Fx.push_back(x3->get_Fx(F));
 }
