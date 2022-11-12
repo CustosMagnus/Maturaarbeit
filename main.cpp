@@ -11,7 +11,10 @@
 
 using namespace std;
 
-void model1() {
+
+
+
+void model() {
     s_vec save;
     ligament
     x0(57.07347, 20.54411, 20.46205, 76.21216, 0.25),
@@ -86,14 +89,14 @@ void model1() {
                    lig[1].x * lig[1].r * sin(lig[1].betta) +
                    lig[2].x * lig[2].r * sin(lig[2].betta) +
                    lig[3].x * lig[3].r * sin(lig[3].betta));
+        // calculate and save Fx (with the function ligament::get_Fx(double))
+        save_and_calculate_ligaments(&lig[0], &lig[1], &lig[2], &lig[3], F);
 
 
         // save data
         {
             v_mu[t_steps] = deg(mu);
             v_zeta[t_steps] = deg(zeta);
-            // calculate and save Fx
-            save_and_calculate_ligaments(&lig[0], &lig[1], &lig[2], &lig[3], F);
             peroneus.v_F.push_back(peroneus.F);
         }
 
@@ -101,13 +104,11 @@ void model1() {
         print(h_on_floor_check, dt, F_N, F_Achillessehne, lig[0].Fx, peroneus.F, t_steps);
     }
     // write to file
-    vector<vector<double>*> vec_val{&peroneus.v_F, &v_F_N, &v_F_Achillessehne, &v_mu, &v_zeta, &lig[0].v_Fx, &lig[1].v_Fx, &lig[2].v_Fx, &lig[3].v_Fx};
-    vector<string> vec_name{"Peroneus.txt", "F_N.txt", "F_Achillessehne.txt", "mu_calculated.txt", "zeta_calculated.txt",
-    "Aponeurosis_plantaris.txt", "Plantare_longum.txt", "Calcaneocuboideum_plantare.txt", "Calcaneonaviculare_plantare.txt"};
-    save.save_all_vector(vec_val, vec_name);
+    save.save_all_vector(vector<vector<double>*> {&peroneus.v_F, &v_F_N, &v_F_Achillessehne, &v_mu, &v_zeta, &lig[0].v_Fx, &lig[1].v_Fx, &lig[2].v_Fx, &lig[3].v_Fx},
+                         vector<string> {"Peroneus.txt", "F_N.txt", "F_Achillessehne.txt", "mu_calculated.txt", "zeta_calculated.txt", "Aponeurosis_plantaris.txt", "Plantare_longum.txt", "Calcaneocuboideum_plantare.txt", "Calcaneonaviculare_plantare.txt"});
 }
 
 int main() {
     calculate_angles_from_coordinates();
-    model1();
+    model();
 }

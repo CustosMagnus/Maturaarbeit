@@ -2,6 +2,7 @@
 #define CODE_EXTERN_VARIABLES_H
 
 #include <vector>
+#include <string>
 
 /*
 mu(x) =
@@ -46,5 +47,7 @@ const std::vector<double> v_zeta_coef{
 
 // scale from geogebra file to real distance
 const double scale = 1.0;
+
+// all other Variables for model1()
 
 #endif //CODE_EXTERN_VARIABLES_H

@@ -76,7 +76,7 @@ void s_vec::save_vector(vector<double> &vec, const string name) {
     file.close();
 }
 
-void s_vec::save_all_vector(vector<vector<double>*> vec_val, vector<string> &vec_name){
+void s_vec::save_all_vector(vector<vector<double>*> vec_val, vector<string> vec_name){
     for (int i = 0; i < vec_name.size(); i++){
         save_vector(*vec_val[i], vec_name[i]);
     }

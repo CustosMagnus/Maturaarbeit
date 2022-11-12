@@ -11,7 +11,7 @@ class s_vec {
 private:
     void save_vector(vector<double> &vec, string name);
 public:
-    void save_all_vector(vector<vector<double>*>, vector<string>&);
+    void save_all_vector(vector<vector<double>*>, vector<string>);
 };
 
 void print(bool, double, double, double, double, double, unsigned int);
