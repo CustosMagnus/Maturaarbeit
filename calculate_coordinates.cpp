@@ -8,8 +8,8 @@
 using namespace std;
 
 void calculate_angles_from_coordinates() {
-    ofstream zeta_file("./c_results/angle_zeta.txt");
-    ofstream mu_file("./c_results/angle_mu.txt");
+    ofstream zeta_file("./c_results/calc_from_coord/angle_zeta.txt");
+    ofstream mu_file("./c_results/calc_from_coord/angle_mu.txt");
     const string f_name = "py_results/coords.txt";
     string txt;
     int j = 0;

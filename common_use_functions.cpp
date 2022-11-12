@@ -40,16 +40,7 @@ double deg(double rad) {
     return (rad * (180 / PI));
 }
 
-void save_vector(vector<double> &vec, const string name) {
-    ofstream file(("c_results/" + name));
-    for (auto i: vec) {
-        file << i << "\n";
-    }
-    file.close();
-}
-
-double
-get_poly_func_value(const vector<double> &vec, double x) { // vector contains all the coefficients of the function
+double get_poly_func_value(const vector<double> &vec, double x) { // vector contains all the coefficients of the function
     int n = 0; // (to the power of n)
     double res = 0;
     double a = 1.2e0; // 0.0025/(1/480)
@@ -60,4 +51,33 @@ get_poly_func_value(const vector<double> &vec, double x) { // vector contains al
         n++;
     }
     return res;
+}
+
+void print(bool h_on_floor_check, double dt, double F_N, double F_Achillessehne, double x1_Fx, double pF, unsigned int t_steps){
+    if (h_on_floor_check) {
+        cout << "Ferse ist auf dem Boden" << endl;
+    } else {
+        cout << "Ferse ist nicht auf dem Boden" << endl;
+    }
+    cout << "An t=" << dt * t_steps <<
+         "\nF_N: " << F_N <<
+         "N\nAchillessehne: " << F_Achillessehne <<
+         "N\nAponeurosis plantaris: " << x1_Fx <<
+         "N\nPeroneus: " << pF <<
+         "N\n";
+}
+
+// s_vec Class
+void s_vec::save_vector(vector<double> &vec, const string name) {
+    ofstream file(("c_results/" + name));
+    for (auto i: vec) {
+        file << i << "\n";
+    }
+    file.close();
+}
+
+void s_vec::save_all_vector(vector<vector<double>*> vec_val, vector<string> &vec_name){
+    for (auto i = 0; i < vec_name.size(); i++){
+        save_vector(*vec_val[i], vec_name[i]);
+    }
 }

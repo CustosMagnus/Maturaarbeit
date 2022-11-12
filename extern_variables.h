@@ -44,4 +44,7 @@ const std::vector<double> v_zeta_coef{
         0.000000073883761961084400000000,
 };
 
+// scale from geogebra file to real distance
+const double scale = 1.0;
+
 #endif //CODE_EXTERN_VARIABLES_H
