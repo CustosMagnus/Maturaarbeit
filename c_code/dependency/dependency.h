@@ -8,6 +8,4 @@
 #include <iostream>
 #include <fstream>
 
-
-
 #endif //CODE_DEPENDENCY_H
