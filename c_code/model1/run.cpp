@@ -15,10 +15,10 @@ void model1::run() {
         */
         if (zeta <= rad(69.0)) {
             h_on_floor_check = false;
-            M_N = (F_N - peroneus.calc_F(F_N, zeta)) * sin(zeta) * l;
+            M_N = (F_N - disturbance_forces()) * sin(zeta) * l;
         } else { // if heel is on the floor
             if (h_on_floor == 0) {
-                h_on_floor = F_N - peroneus.calc_F(F_N, zeta);
+                h_on_floor = F_N - disturbance_forces();
             }
             h_on_floor_check = true;
             M_N = h_on_floor * sin(zeta) * l;
@@ -42,3 +42,4 @@ void model1::run() {
     save.save_all_vector(vector<vector<double>*> {&peroneus.v_F, &v_F_N, &v_F_Achillessehne, &v_mu, &v_zeta, &lig[0].v_Fx, &lig[1].v_Fx, &lig[2].v_Fx, &lig[3].v_Fx},
                          vector<string> {"Peroneus.txt", "F_N.txt", "F_Achillessehne.txt", "mu_calculated.txt", "zeta_calculated.txt", "Aponeurosis_plantaris.txt", "Plantare_longum.txt", "Calcaneocuboideum_plantare.txt", "Calcaneonaviculare_plantare.txt"});
 }
+
