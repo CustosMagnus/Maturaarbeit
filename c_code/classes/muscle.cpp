@@ -16,7 +16,7 @@ double muscle::calc_F(double F_N, double zeta) {
 
 double muscle::get_gx(double F_N) {
     double peroneus_F_N, zeta, omega_, F_peroneus_2, F_N_2, F_N_3, t;
-    t = 1e0;
+    t = 9e-1;
     peroneus_F_N = 140 * t;
     zeta = rad(63);
     omega_ = rad(45);

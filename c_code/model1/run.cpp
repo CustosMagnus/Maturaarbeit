@@ -15,10 +15,10 @@ void model1::run() {
         */
         if (zeta <= rad(69.0)) {
             h_on_floor_check = false;
-            M_N = (F_N - peroneus.calc_F(F_N, zeta)) * sin(zeta) * l;
+            M_N = (F_N - peroneus.calc_F(F_N, zeta) - mechanical_disturbances()) * sin(zeta) * l;
         } else { // if heel is on the floor
             if (h_on_floor == 0) {
-                h_on_floor = F_N - peroneus.calc_F(F_N, zeta);
+                h_on_floor = F_N - peroneus.calc_F(F_N, zeta)- mechanical_disturbances();
             }
             h_on_floor_check = true;
             M_N = h_on_floor * sin(zeta) * l;
