@@ -16,9 +16,8 @@ public:
      + 8.884165150928310000000000000000x
      + 51.115641201671700000000000000000
     */
-    const double mu_correction = 0e0; // guessed value due to the circumference of the gastrocnemius
     const std::vector<double> v_mu_coef{
-            51.115641201671700000000000000000 + mu_correction,
+            51.115641201671700000000000000000,
             8.884165150928310000000000000000,
             -1.356165328050340000000000000000,
             0.067666887424138600000000000000,
