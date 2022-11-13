@@ -45,3 +45,7 @@ void model1::background_stuff(unsigned int t_steps) {
     // print the output
     print(t_steps);
 }
+
+double model1::mechanical_disturbances() {
+    return 0e0;
+}
