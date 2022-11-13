@@ -5,5 +5,9 @@
 #include <cmath>
 #include <cassert>
 #include <vector>
+#include <iostream>
+#include <fstream>
+
+
 
 #endif //CODE_DEPENDENCY_H

@@ -1,9 +1,7 @@
 #ifndef CODE_FIND_STRETCHING_FACTOR_H
 #define CODE_FIND_STRETCHING_FACTOR_H
 
-#include <iostream>
-#include <vector>
-#include <cmath>
+#include "../dependency/dependency.h"
 
 double find_stre_func();
 

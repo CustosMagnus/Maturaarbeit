@@ -1,9 +1,7 @@
 #ifndef CODE_SAVE_H
 #define CODE_SAVE_H
 
-#include <vector>
-#include <string>
-#include <fstream>
+#include "../dependency/dependency.h"
 
 using namespace std;
 

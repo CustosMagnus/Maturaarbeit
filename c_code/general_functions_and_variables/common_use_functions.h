@@ -1,8 +1,7 @@
 #ifndef CODE_COMMON_USE_FUNCTIONS_H
 #define CODE_COMMON_USE_FUNCTIONS_H
 
-#include <string>
-#include <vector>
+#include "../dependency/dependency.h"
 #include "../classes/ligament.h"
 
 
