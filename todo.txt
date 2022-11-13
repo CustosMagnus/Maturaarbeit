@@ -1,0 +1,3 @@
+- evtl Koordinatensystem aufrichten
+- mechanische Belastung wegrechnen, bei dem die Kraft über den Fussrücken weggebracht wird
+- Bänderverhältniss verbessern
