@@ -47,8 +47,8 @@ private:
 public:
     model1();
     void run();
-
     double mechanical_disturbances();
+    double disturbance_forces();
 };
 
 
