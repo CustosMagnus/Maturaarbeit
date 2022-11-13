@@ -1,7 +1,4 @@
 #include "find_stretching_factor.h"
-#include <iostream>
-#include <vector>
-#include <cmath>
 
 using namespace std;
 

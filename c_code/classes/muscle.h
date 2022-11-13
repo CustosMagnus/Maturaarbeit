@@ -10,7 +10,7 @@
 
 using namespace std;
 
-class muscle {
+class muscle : general_var {
 public: // variables
     // current force in N
     double F;

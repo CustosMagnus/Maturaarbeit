@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class ligament {
+class ligament : general_var{
 public: // variables
     // lengths
     double l, r;
