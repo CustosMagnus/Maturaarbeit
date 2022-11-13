@@ -5,6 +5,7 @@
 #include <vector>
 #include "ligament.h"
 
+
 using namespace std;
 
 class s_vec {
@@ -18,7 +19,7 @@ void print(bool, double, double, double, double, double, unsigned int);
 
 int file_length(const string &file_name);
 
-double *read_file(const string &file_name, double *ar);
+void read_file(const string &file_name, vector<double> *ar);
 
 double rad(double deg);
 

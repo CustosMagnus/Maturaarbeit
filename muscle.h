@@ -25,7 +25,7 @@ public: // variables
     // vektor with all F
     vector<double> v_F;
 public: // functions
-    muscle(double, double, double);
+    void init(double, double, double);
     double calc_F(double, double, double);
 };
 
