@@ -32,13 +32,11 @@ public:
     // backside of the foot
     double F_Achillessehne{};
     double mu{};
-    double r = 21.12854; // r = r0 from geogebra file
     double M_A{};
     vector<double> v_F_Achillessehne, v_mu;
     // frontside of the foot
     double F_N{};
     double zeta{};
-    double l = 57.07347; // l = l1 from geogebra file
     double M_N{};
     vector<double> v_F_N, v_zeta;
 

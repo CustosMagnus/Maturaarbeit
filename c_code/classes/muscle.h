@@ -11,8 +11,6 @@ class muscle : general_var {
 public: // variables
     // current force in N
     double F;
-    // max force in N
-    double F_max;
     // length of u
     double u;
     // angle between u and r0
@@ -22,8 +20,10 @@ public: // variables
     // vektor with all F
     vector<double> v_F;
 public: // functions
-    void init(double, double, double);
-    double calc_F(double, double, double);
+    void init(double, double);
+    double calc_F(double, double);
+
+    double get_gx(double F_N);
 };
 
 #endif //CODE_MUSCLE_H
