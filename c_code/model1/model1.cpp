@@ -10,17 +10,15 @@ model1::model1(){
     lig.push_back(x0); lig.push_back(x1); lig.push_back(x2); lig.push_back(x3);
     assert(lig[0].x+lig[1].x+lig[2].x+lig[3].x==1); // check if the sum of all the proportions x = 1
     // muscle
-    peroneus.init(6.73575, 500, 6.59942);
+    peroneus.init(6.73575, 6.59942);
     // get data
     read_file(k_file, &data);
     tare = sqrt(pow(data[0], 2));
     // names are taken from the geogebra file
     // backside of the foot
     v_F_Achillessehne.resize(k_len, 0);
-    r *= scale;
     // frontside of the foot
     v_F_N.resize(k_len, 0);
-    l *= scale;
 }
 
 void model1::print(unsigned int t_steps){
