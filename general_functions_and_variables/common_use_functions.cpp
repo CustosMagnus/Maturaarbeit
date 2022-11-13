@@ -50,20 +50,6 @@ double get_poly_func_value(const vector<double> &vec, double x) { // vector cont
     return res;
 }
 
-void print(bool h_on_floor_check, double dt, double F_N, double F_Achillessehne, double x1_Fx, double pF, unsigned int t_steps){
-    if (h_on_floor_check) {
-        cout << "Ferse ist auf dem Boden" << endl;
-    } else {
-        cout << "Ferse ist nicht auf dem Boden" << endl;
-    }
-    cout << "An t=" << dt * t_steps <<
-         "\nF_N: " << F_N <<
-         "N\nAchillessehne: " << F_Achillessehne <<
-         "N\nAponeurosis plantaris: " << x1_Fx <<
-         "N\nPeroneus: " << pF <<
-         "N\n";
-}
-
 // s_vec Class
 void s_vec::save_vector(vector<double> &vec, const string name) {
     ofstream file(("c_results/" + name));

@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-#include "ligament.h"
+#include "../classes/ligament.h"
 
 
 using namespace std;
@@ -14,8 +14,6 @@ private:
 public:
     void save_all_vector(vector<vector<double>*>, vector<string>);
 };
-
-void print(bool, double, double, double, double, double, unsigned int);
 
 int file_length(const string &file_name);
 

@@ -3,4 +3,4 @@ project(code)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(code main.cpp calculate_coordinates.cpp calculate_coordinates.h common_use_functions.cpp common_use_functions.h find_stretching_factor.cpp find_stretching_factor.h extern_variables.h ligament.h muscle.h ligament.cpp muscle.cpp)
+add_executable(code main.cpp general_functions_and_variables/calculate_coordinates.cpp general_functions_and_variables/calculate_coordinates.h general_functions_and_variables/common_use_functions.cpp general_functions_and_variables/common_use_functions.h unused_functions/find_stretching_factor.cpp unused_functions/find_stretching_factor.h general_functions_and_variables/extern_variables.h classes/ligament.h classes/muscle.h classes/ligament.cpp classes/muscle.cpp model1/model1.cpp model1/model1.h model1/run.cpp)
