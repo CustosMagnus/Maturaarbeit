@@ -6,7 +6,7 @@ void model1::run() {
         mu = rad(get_poly_func_value(v_mu_coef, t_steps));
         peroneus.omega = mu - peroneus.gamma; // angle between u and F_Achillessehne
 
-        v_F_N[t_steps] = F_N = (data[t_steps] + tare) / 2; // divided by two because a human has two feet
+        v_F_N.push_back(F_N = (data[t_steps] + tare) / 2); // divided by two because a human has two feet
         if (F_N < 0) { v_F_N[t_steps] = F_N = 0; } // because there should be no negative force
         /*
          if heel is not on the floor
