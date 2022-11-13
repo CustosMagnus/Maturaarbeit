@@ -20,16 +20,13 @@ int file_length(const string &file_name) { // returns number of lines in a file
     return i;
 }
 
-double *read_file(const string &file_name, double *ar) { // ar = double ar[file_length(file)];
-    int i = 0;
+void read_file(const string &file_name, vector<double> *ar) { // ar = vector<double> ar[file_length(file)];
     string txt;
     ifstream file(file_name);
     while (getline(file, txt)) {
-        ar[i] = stod(txt);
-        i++;
+        ar->push_back(stod(txt));
     }
     file.close();
-    return ar; // long double *res = read_file(ar);
 }
 
 double rad(double deg) { // changes degree to radians
