@@ -47,5 +47,12 @@ void model1::background_stuff(unsigned int t_steps) {
 }
 
 double model1::mechanical_disturbances() {
-    return 0e0;
+    return (sin(zeta)*F_N);
+}
+
+double model1::disturbing_forces(){
+    double F_disturbing = 0;
+    // F_disturbing += mechanical_disturbances();
+    F_disturbing += peroneus.calc_F(F_N, zeta);
+    return F_disturbing;
 }

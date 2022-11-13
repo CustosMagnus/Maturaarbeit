@@ -49,6 +49,7 @@ public:
     void run();
 
     double mechanical_disturbances();
+    double disturbing_forces();
 };
 
 
