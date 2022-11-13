@@ -1,7 +1,7 @@
 #include "muscle.h"
 
 
-muscle::muscle(double angle_gamma, double F_max_, double length_u) {
+void muscle::init(double angle_gamma, double F_max_, double length_u) {
     gamma = rad(angle_gamma);
     F_max = F_max_;
     u = length_u*scale;
