@@ -54,5 +54,6 @@ double model1::disturbance_forces() {
     double F_res = 0;
     F_res += mechanical_disturbances();
     F_res += peroneus.calc_F(F_N - F_res, zeta);
+    if (F_res>=F_N){F_res=F_N;} // because anything else would be unrealistic
     return F_res;
 }
