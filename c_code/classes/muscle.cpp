@@ -25,6 +25,5 @@ double muscle::get_gx(double F_N) {
     const double a = ((peroneus_F_N*sin(zeta)*l)/(sin(omega_)*u)-F_peroneus_2*(F_N_3/F_N_2))/(pow(F_N_3,2)-pow(F_N_2,2)*(F_N_3/F_N_2));
     const double b = (F_peroneus_2-a*pow(F_N_2,2))/F_N_2;
     const double c = pow(b, 2)/(4*a); // c is x at g'(x) = 0
-    cout<<a<<endl<<b<<endl<<c<<endl;
     return (a*pow(F_N, 2)+b*F_N+c);
 }

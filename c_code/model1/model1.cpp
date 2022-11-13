@@ -17,8 +17,6 @@ model1::model1(){
     // names are taken from the geogebra file
     // backside of the foot
     v_F_Achillessehne.resize(k_len, 0);
-    // frontside of the foot
-    v_F_N.resize(k_len, 0);
 }
 
 void model1::print(unsigned int t_steps){
