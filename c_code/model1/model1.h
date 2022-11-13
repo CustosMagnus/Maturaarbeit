@@ -1,16 +1,15 @@
 #ifndef CODE_MODEL1_H
 #define CODE_MODEL1_H
 
+#include "../dependency/dependency.h"
 #include "../classes/muscle.h"
 #include "../classes/ligament.h"
+#include "../classes/save.h"
 #include "../general_functions_and_variables/extern_variables.h"
 #include "../general_functions_and_variables/common_use_functions.h"
-#include <string>
-#include <cmath>
-#include <cassert>
-#include <vector>
 
-class model1 {
+
+class model1 : general_var{
 public:
     // ligaments
     vector<ligament> lig;

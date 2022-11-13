@@ -8,13 +8,6 @@
 
 using namespace std;
 
-class s_vec {
-private:
-    void save_vector(vector<double> &vec, string name);
-public:
-    void save_all_vector(vector<vector<double>*>, vector<string>);
-};
-
 int file_length(const string &file_name);
 
 void read_file(const string &file_name, vector<double> *ar);
