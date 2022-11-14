@@ -10,7 +10,7 @@ model1::model1(){
     lig.push_back(x0); lig.push_back(x1); lig.push_back(x2); lig.push_back(x3);
     assert(lig[0].x+lig[1].x+lig[2].x+lig[3].x==1); // check if the sum of all the proportions x = 1
     // muscle
-    peroneus.init(6.73575, 6.59942);
+    peroneus.init(6.73575, 6.59942, "peroneus");
     // get data
     read_file(k_file, &data);
     tare = sqrt(pow(data[0], 2));

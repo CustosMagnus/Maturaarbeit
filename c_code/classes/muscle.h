@@ -9,6 +9,8 @@ using namespace std;
 
 class muscle : general_var {
 public: // variables
+    // muscle name
+    string muscle_name;
     // current force in N
     double F;
     // length of u
@@ -17,13 +19,13 @@ public: // variables
     double gamma;
     // angle to achilles tendom
     double omega;
-    // vektor with all F
+    // vektor with all F_ligament
     vector<double> v_F;
 public: // functions
-    void init(double, double);
+    void init(double, double, string);
     double calc_F(double, double);
 
-    double get_gx(double F_N);
+    double get_gx(double);
 };
 
 #endif //CODE_MUSCLE_H

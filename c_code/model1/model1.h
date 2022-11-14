@@ -15,7 +15,7 @@ public:
     vector<ligament> lig;
     // muscle
     muscle peroneus;
-    double F{}; // total force on all Ligaments
+    double F_ligament; // total force on all Ligaments
     // files
     s_vec save;
     const string k_file = "c_data/data_kraftmessplatte.txt";

@@ -27,13 +27,13 @@ void model1::run() {
         v_F_Achillessehne[t_steps] = F_Achillessehne = M_N / (sin(mu) * r);
         M_A = sin(mu) * r * F_Achillessehne;
 
-        // calculate F which is the sum of all strains in x_n
-        F = M_A / (lig[0].x * lig[0].r * sin(lig[0].betta) +
+        // calculate F_ligament which is the sum of all strains in x_n
+        F_ligament = M_A / (lig[0].x * lig[0].r * sin(lig[0].betta) +
                    lig[1].x * lig[1].r * sin(lig[1].betta) +
                    lig[2].x * lig[2].r * sin(lig[2].betta) +
                    lig[3].x * lig[3].r * sin(lig[3].betta));
         // calculate and save Fx (with the function ligament::get_Fx(double))
-        save_and_calculate_ligaments(&lig[0], &lig[1], &lig[2], &lig[3], F);
+        save_and_calculate_ligaments(&lig[0], &lig[1], &lig[2], &lig[3], F_ligament);
 
         background_stuff(t_steps); // save and print
 
