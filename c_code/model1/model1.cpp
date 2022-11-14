@@ -11,6 +11,8 @@ model1::model1(){
     assert(lig[0].x+lig[1].x+lig[2].x+lig[3].x==1); // check if the sum of all the proportions x = 1
     // muscle
     peroneus.init(6.73575, 6.59942, "peroneus");
+    flexor_digitorum_l.init(6.73575, 6.59942, "flexor_digitorum_longus");
+    flexor_hallucis_l.init(6.73575, 10.86235, "flexor_hallucis_longus");
     // get data
     read_file(k_file, &data);
     tare = sqrt(pow(data[0], 2));
@@ -39,19 +41,23 @@ void model1::background_stuff(unsigned int t_steps) {
         v_mu.push_back(deg(mu));
         v_zeta.push_back(deg(zeta));
         peroneus.v_F.push_back(peroneus.F);
+        flexor_digitorum_l.v_F.push_back(flexor_digitorum_l.F);
+        flexor_hallucis_l.v_F.push_back(flexor_hallucis_l.F);
     }
     // print the output
     print(t_steps);
 }
 
-double model1::mechanical_disturbances() {
+double model1::mechanical_disturbances() const {
     return (cos(zeta)*F_N);
 }
 
 double model1::disturbance_forces() {
     double F_res = 0;
     F_res += mechanical_disturbances();
-    F_res += peroneus.calc_F(F_N - F_res, zeta);
+    F_res += peroneus.calc_F(F_N - mechanical_disturbances(), zeta);
+    F_res += flexor_hallucis_l.calc_F(F_N - mechanical_disturbances(), zeta);
+    F_res += flexor_digitorum_l.calc_F(F_N - mechanical_disturbances(), zeta);
     if (F_res>=F_N){F_res=F_N;} // because anything else would be unrealistic
     return F_res;
 }

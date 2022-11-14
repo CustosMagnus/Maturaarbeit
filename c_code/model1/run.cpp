@@ -28,10 +28,11 @@ void model1::run() {
         M_A = sin(mu) * r * F_Achillessehne;
 
         // calculate F_ligament which is the sum of all strains in x_n
-        F_ligament = M_A / (lig[0].x * lig[0].r * sin(lig[0].betta) +
+        F_ligament = (M_A / (lig[0].x * lig[0].r * sin(lig[0].betta) +
                    lig[1].x * lig[1].r * sin(lig[1].betta) +
                    lig[2].x * lig[2].r * sin(lig[2].betta) +
-                   lig[3].x * lig[3].r * sin(lig[3].betta));
+                   lig[3].x * lig[3].r * sin(lig[3].betta)))
+                           - flexor_digitorum_l.F - flexor_hallucis_l.F; // these also support the arch
         // calculate and save Fx (with the function ligament::get_Fx(double))
         save_and_calculate_ligaments(&lig[0], &lig[1], &lig[2], &lig[3], F_ligament);
 
@@ -39,7 +40,7 @@ void model1::run() {
 
     }
     // write to file
-    save.save_all_vector(vector<vector<double>*> {&peroneus.v_F, &v_F_N, &v_F_Achillessehne, &v_mu, &v_zeta, &lig[0].v_Fx, &lig[1].v_Fx, &lig[2].v_Fx, &lig[3].v_Fx},
-                         vector<string> {"Peroneus.txt", "F_N.txt", "F_Achillessehne.txt", "mu_calculated.txt", "zeta_calculated.txt", "Aponeurosis_plantaris.txt", "Plantare_longum.txt", "Calcaneocuboideum_plantare.txt", "Calcaneonaviculare_plantare.txt"});
+    save.save_all_vector(vector<vector<double>*> {&flexor_hallucis_l.v_F, &flexor_digitorum_l.v_F ,&peroneus.v_F, &v_F_N, &v_F_Achillessehne, &v_mu, &v_zeta, &lig[0].v_Fx, &lig[1].v_Fx, &lig[2].v_Fx, &lig[3].v_Fx},
+                         vector<string> {"Flexor_hallucis_longus.txt", "Flexor_digitorum_longus.txt", "Peroneus.txt", "F_N.txt", "F_Achillessehne.txt", "mu_calculated.txt", "zeta_calculated.txt", "Aponeurosis_plantaris.txt", "Plantare_longum.txt", "Calcaneocuboideum_plantare.txt", "Calcaneonaviculare_plantare.txt"});
 }
 

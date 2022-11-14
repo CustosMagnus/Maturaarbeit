@@ -15,6 +15,8 @@ public:
     vector<ligament> lig;
     // muscle
     muscle peroneus;
+    muscle flexor_hallucis_l;
+    muscle flexor_digitorum_l;
     double F_ligament; // total force on all Ligaments
     // files
     s_vec save;
@@ -47,7 +49,7 @@ private:
 public:
     model1();
     void run();
-    double mechanical_disturbances();
+    double mechanical_disturbances() const;
     double disturbance_forces();
 };
 
