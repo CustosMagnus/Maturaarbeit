@@ -33,6 +33,8 @@ void model1::run() {
                    lig[2].x * lig[2].r * sin(lig[2].betta) +
                    lig[3].x * lig[3].r * sin(lig[3].betta)))
                            - flexor_digitorum_l.F - flexor_hallucis_l.F; // these also support the arch
+
+        if (F_ligament<0){F_ligament=0;} // because it can't be negative (maximum negativ value measured without this line was under 0.2N)
         // calculate and save Fx (with the function ligament::get_Fx(double))
         save_and_calculate_ligaments(&lig[0], &lig[1], &lig[2], &lig[3], F_ligament);
 
