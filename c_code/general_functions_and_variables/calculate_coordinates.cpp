@@ -1,11 +1,4 @@
-#include <cmath>
-#include <iostream>
-#include <string>
 #include "calculate_coordinates.h"
-#include <fstream>
-#include "common_use_functions.h"
-
-using namespace std;
 
 void calculate_angles_from_coordinates() {
     ofstream zeta_file("./c_results/calc_from_coord/angle_zeta.txt");

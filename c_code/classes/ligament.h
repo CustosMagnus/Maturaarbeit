@@ -1,15 +1,13 @@
 #ifndef CODE_LIGAMENT_H
 #define CODE_LIGAMENT_H
 
-#include <iostream>
-#include <vector>
-#include <cassert>
-#include "common_use_functions.h"
-#include "extern_variables.h"
+#include "../dependency/dependency.h"
+#include "../general_functions_and_variables/common_use_functions.h"
+#include "../general_functions_and_variables/extern_variables.h"
 
 using namespace std;
 
-class ligament {
+class ligament : general_var{
 public: // variables
     // lengths
     double l, r;

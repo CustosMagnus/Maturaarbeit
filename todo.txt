@@ -1,0 +1,4 @@
+- evtl Koordinatensystem aufrichten
+- Bänderverhältniss verbessern
+- Peroneus wieviel prozent ist wirklich durch den Muskel
+- calculate and insert scale
