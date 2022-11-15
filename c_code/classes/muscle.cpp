@@ -16,7 +16,7 @@ double muscle::calc_F(double F_N, double zeta) {
 double muscle::get_gx(double F_N) {
     if (muscle_name == "peroneus") {
         double peroneus_F_N, F_peroneus_2, F_N_2, F_N_3, t, zeta_, omega_;
-        t = 6e-1;
+        t = 2e-1;
         peroneus_F_N = 1.40e2;
         F_peroneus_2 = 69;
         F_N_2 = 590.0;
