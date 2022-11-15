@@ -9,6 +9,8 @@ using namespace std;
 
 class ligament : general_var{
 public: // variables
+    // ligament_name
+    string lig_name;
     // lengths
     double l, r;
     // angle in rad
@@ -20,8 +22,10 @@ public: // variables
     // vektor with all Fx
     vector<double> v_Fx;
 public: // functions
-    ligament(double, double, double, double, double); // constructor
+    ligament(double, double, double, double, string); // constructor
     double get_Fx(double);
+
+    double get_proportion() const;
 };
 
 #endif //CODE_LIGAMENT_H

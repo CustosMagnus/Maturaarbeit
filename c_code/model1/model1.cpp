@@ -4,10 +4,10 @@
 model1::model1(){
     // ligaments
     ligament
-            x0(57.07347, 20.54411, 20.46205, 76.21216, 0.25),
-            x1(31.95423,20.54411,36.2549,66.90092,0.25),
-            x2(19.46833,15.10836,50.22875,82.05809,0.25),
-            x3(14.95728,11.53488,40.95749,121.78992,0.25);
+            x0(57.07347, 20.54411, 20.46205, 76.21216, "aponeurosis_plantaris"),
+            x1(31.95423, 20.54411, 36.25490, 66.90092, "plantare_longum"),
+            x2(19.46833, 15.10836, 50.22875, 82.05809, "calcaneocuboideum_plantare"),
+            x3(14.95728, 11.53488, 40.95749, 121.78992, "calcaneonaviculare_plantare");
     lig.push_back(x0); lig.push_back(x1); lig.push_back(x2); lig.push_back(x3);
     assert(lig[0].x+lig[1].x+lig[2].x+lig[3].x==1); // check if the sum of all the proportions x = 1
     // muscle
