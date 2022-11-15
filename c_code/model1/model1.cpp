@@ -1,4 +1,5 @@
 #include "model1.h"
+#include <cmath>
 
 model1::model1(){
     // ligaments
@@ -61,3 +62,4 @@ double model1::disturbance_forces() {
     if (F_res>=F_N){F_res=F_N;} // because anything else would be unrealistic
     return F_res;
 }
+

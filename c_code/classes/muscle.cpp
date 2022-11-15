@@ -9,7 +9,6 @@ void muscle::init(double angle_gamma, double length_u, string muscle_name_) {
 
 double muscle::calc_F(double F_N, double zeta) {
     F = get_gx(F_N);
-    cout<<F<<endl;
     return (F*sin(omega)*u)/(sin(zeta)*l);
 }
 
