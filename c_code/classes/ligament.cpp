@@ -13,7 +13,7 @@ ligament::ligament(double length_l, double length_r, // constructor
     assert(alpha_l > 0);
     assert(betta_r > 0);
     x = get_proportion();
-    cout<<lig_name<<" "<<x<<endl;
+    cout<<lig_name<<" "<<x<<endl<<endl;
     l = length_l * scale;
     r = length_r * scale;
     alpha = rad(alpha_l);
