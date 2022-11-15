@@ -52,6 +52,8 @@ public:
 
     const double l = 57.07347*scale; // l = l1 from geogebra file
     const double r = 21.12854*scale; // r = r0 from geogebra file
+
+    double zeta;
 };
 
 #endif //CODE_EXTERN_VARIABLES_H

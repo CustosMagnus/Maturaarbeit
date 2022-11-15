@@ -4,7 +4,7 @@ void model1::run() {
     for (unsigned int t_steps = 0; t_steps < k_len; t_steps++) {
         zeta = rad(get_poly_func_value(v_zeta_coef, t_steps));
         mu = rad(get_poly_func_value(v_mu_coef, t_steps));
-        peroneus.omega = mu - peroneus.gamma; // angle between u and F_Achillessehne
+        flexor_hallucis_l.omega = flexor_digitorum_l.omega = peroneus.omega = mu - peroneus.gamma; // angle between u and F_Achillessehne
 
         v_F_N.push_back(F_N = (data[t_steps] + tare) / 2); // divided by two because a human has two feet
         if (F_N < 0) { v_F_N[t_steps] = F_N = 0; } // because there should be no negative force

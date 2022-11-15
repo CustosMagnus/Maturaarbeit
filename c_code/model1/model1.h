@@ -29,17 +29,16 @@ public:
     const double dt = 2.5e-3;
     // heel on floor
     double h_on_floor = 0; // Force at the moment the foot touches the floor
-    bool h_on_floor_check{};
+    bool h_on_floor_check;
     // names are taken from the geogebra file
     // backside of the foot
-    double F_Achillessehne{};
-    double mu{};
-    double M_A{};
+    double F_Achillessehne;
+    double mu;
+    double M_A;
     vector<double> v_F_Achillessehne, v_mu;
     // frontside of the foot
-    double F_N{};
-    double zeta{};
-    double M_N{};
+    double F_N;
+    double M_N;
     vector<double> v_F_N, v_zeta;
 
 private:

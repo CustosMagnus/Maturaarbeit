@@ -1,6 +1,4 @@
 - evtl Koordinatensystem aufrichten
 - Bänderverhältniss verbessern
 - Peroneus wieviel prozent ist wirklich durch den Muskel
-- dehnung und zurückschnellen der Bänder
-- plantar intrinsic muslces hinzufügen
-- add flexor hallucis longus, flexor digitorum longus
+- calculate and insert scale
