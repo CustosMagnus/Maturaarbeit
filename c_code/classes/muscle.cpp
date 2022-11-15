@@ -43,4 +43,5 @@ double muscle::get_gx(double F_N) {
         // ax+b=y
         return (1.4e1/2.95e2*F_N); // <-- f(x)
     }
+    return 0;
 }

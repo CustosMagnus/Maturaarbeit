@@ -48,7 +48,7 @@ public:
     };
 
     // scale from geogebra file to real distance
-    const double scale = 1.0;
+    const double scale = 0.167789527;
 
     const double l = 57.07347*scale; // l = l1 from geogebra file
     const double r = 21.12854*scale; // r = r0 from geogebra file
