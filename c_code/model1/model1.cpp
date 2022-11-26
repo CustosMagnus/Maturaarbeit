@@ -46,7 +46,7 @@ void model1::background_stuff(unsigned int t_steps) {
         flexor_hallucis_l.v_F.push_back(flexor_hallucis_l.F);
     }
     // print the output
-    print(t_steps);
+    //print(t_steps);
 }
 
 double model1::mechanical_disturbances() const {

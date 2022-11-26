@@ -1,0 +1,132 @@
+calc.py
+main.cpp
+Ordner: c_code
+    Ordner: classes
+            ligament.cpp
+            ligament.h
+            muscle.cpp
+            muscle.h
+            save.cpp
+            save.h
+            
+    Ordner: dependency
+            dependency.h
+            
+    Ordner: general_functions_and_variables
+            calculate_coordinates.cpp
+            calculate_coordinates.h
+            common_use_functions.cpp
+            common_use_functions.h
+            extern_variables.h
+            
+    Ordner: model1
+            model1.cpp
+            model1.h
+            run.cpp
+            
+    Ordner: unused_functions
+            find_stretching_factor.cpp
+            find_stretching_factor.h
+            
+Ordner: c_data
+        data_kraftmessplatte.txt
+        
+Ordner: c_results
+        Aponeurosis_plantaris.txt
+        Calcaneocuboideum_plantare.txt
+        Calcaneonaviculare_plantare.txt
+        Flexor_digitorum_longus.txt
+        Flexor_hallucis_longus.txt
+        F_Achillessehne.txt
+        F_N.txt
+        mu_calculated.txt
+        Peroneus.txt
+        Plantare_longum.txt
+        zeta_calculated.txt
+        
+    Ordner: calc_from_coord
+            angle_mu.txt
+            angle_zeta.txt
+            
+Ordner: py_results
+        coords.txt
+        scale_in_pixel_per_centimeter.txt
+        
+Ordner: single_picture_videos
+        PA260011020.png
+        PA260011021.png
+        PA260011022.png
+        PA260011023.png
+        PA260011024.png
+        PA260011025.png
+        PA260011026.png
+        PA260011027.png
+        PA260011028.png
+        PA260011029.png
+        PA260011030.png
+        PA260011031.png
+        PA260011032.png
+        PA260011033.png
+        PA260011034.png
+        PA260011035.png
+        PA260011036.png
+        PA260011037.png
+        PA260011038.png
+        PA260011039.png
+        PA260011040.png
+        PA260011041.png
+        PA260011042.png
+        PA260011043.png
+        PA260011044.png
+        PA260011045.png
+        PA260011046.png
+        PA260011047.png
+        PA260011048.png
+        PA260011049.png
+        PA260011050.png
+        PA260011051.png
+        PA260011052.png
+        PA260011053.png
+        PA260011054.png
+        PA260011055.png
+        PA260011056.png
+        PA260011057.png
+        PA260011058.png
+        PA260011059.png
+        PA260011060.png
+        PA260011061.png
+        PA260011062.png
+        PA260011063.png
+        PA260011064.png
+        PA260011065.png
+        PA260011066.png
+        PA260011067.png
+        PA260011068.png
+        PA260011069.png
+        PA260011070.png
+        PA260011071.png
+        PA260011072.png
+        PA260011073.png
+        PA260011074.png
+        PA260011075.png
+        PA260011076.png
+        PA260011077.png
+        PA260011078.png
+        PA260011079.png
+        PA260011080.png
+        PA260011081.png
+        PA260011082.png
+        PA260011083.png
+        PA260011084.png
+        PA260011085.png
+        PA260011086.png
+        PA260011087.png
+        PA260011088.png
+        PA260011089.png
+        PA260011090.png
+        PA260011091.png
+        PA260011092.png
+        PA260011093.png
+        PA260011094.png
+
+            
