@@ -27,7 +27,7 @@ double ligament::get_Fx(double F){
 
 double ligament::get_proportion() const {
     // diameter in mm^2 of the corresponding ligament (real value is only known for x0 and x3)
-    double l_x0 = 69.2, l_x1, l_x2, l_x3 = 24.5; // 33.85
+    double l_x0 = 69.2, l_x1, l_x2, l_x3 = 24.5;
     l_x1 = l_x3 * 1.1e0;
     l_x2 = l_x3 * 5.0e-1;
     if (lig_name == "aponeurosis_plantaris"){
